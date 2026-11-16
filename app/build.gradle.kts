@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.assessment.movie"
+    namespace = "com.assessment.news"
     compileSdk {
         version = release(37)
     }
