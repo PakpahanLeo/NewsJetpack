@@ -9,3 +9,13 @@ data class News (
     val language: String,
     val country: String
 )
+
+data class NewsArticle(
+    val sourceName: String,
+    val author: String,
+    val title: String,
+    val description: String,
+    val url: String,
+    val imageUrl: String?,
+    val publishedAt: String
+)

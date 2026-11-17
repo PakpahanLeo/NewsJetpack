@@ -17,6 +17,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
 
         setContent {
@@ -25,11 +26,33 @@ class MainActivity : ComponentActivity() {
 
                 HomeScreen(
                     uiState = uiState,
+
+                    onSearch = { query ->
+                        viewModel.loadNews(query)
+                    },
+
                     onCategorySelected = { category ->
                         viewModel.selectCategory(category)
                     },
+
+                    onSourceSelected = { source ->
+                        viewModel.selectSource(source)
+                    },
+
+                    onLoadMoreArticles = {
+                        viewModel.loadMoreArticles()
+                    },
+
+                    onLoadMoreSources = {
+                        viewModel.loadMoreSources()
+                    },
+
                     onBackToCategories = {
                         viewModel.clearCategory()
+                    },
+
+                    onBackToSources = {
+                        viewModel.clearSource()
                     }
                 )
             }
