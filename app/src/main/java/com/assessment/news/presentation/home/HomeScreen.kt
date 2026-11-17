@@ -172,7 +172,7 @@ private fun CategoryGridScreen(
         )
 
         Text(
-            text = "Stay curious.",
+            text = "News from all over the world.",
             style = MaterialTheme.typography.headlineLarge,
             color = Ink,
             fontWeight = FontWeight.ExtraBold,
